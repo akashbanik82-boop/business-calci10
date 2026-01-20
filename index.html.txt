@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Business Profit & Subsidy Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 700px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    h1, h3 {
+      text-align: center;
+    }
+
+    input, select, button {
+      width: 100%;
+      padding: 10px;
+      margin: 6px 0;
+    }
+
+    button {
+      background: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .result {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    hr {
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Business Profit & Subsidy Calculator</h1>
+  <p style="text-align:center;">
+    For manufacturing, trading & service businesses (India)
+  </p>
+
+  <!-- SIMPLE MODE -->
+  <h3>Simple Profit Calculator</h3>
+
+  <input id="sales" type="number" placeholder="Monthly Sales (₹)">
+  <input id="expenses" type="number" placeholder="Monthly Expenses (₹)">
+
+  <button onclick="calculateSimple()">Calculate</button>
+
+  <div id="simpleResult" class="result"></div>
+
+  <hr>
+
+  <!-- ADVANCED MODE -->
+  <h3>Advanced Business Calculator</h3>
+
+  <select id="industry">
+    <option value="Manufacturing">Manufacturing</option>
+    <option value="Trading">Trading</option>
+    <option value="Service">Service</option>
+  </select>
+
+  <input id="raw" type="number" placeholder="Raw Material Cost (₹)">
+  <input id="labour" type="number" placeholder="Labour Cost (₹)">
+  <input id="electricity" type="number" placeholder="Electricity & Utilities (₹)">
+  <input id="rent" type="number" placeholder="Rent & Overheads (₹)">
+  <input id="emi" type="number" placeholder="Loan EMI (₹)">
+  <input id="investment" type="number" placeholder="Total Investment (₹)">
+  <input id="advSales" type="number" placeholder="Monthly Sales (₹)">
+
+  <button onclick="calculateAdvanced()">Calculate</button>
+
+  <div id="advancedResult" class="result"></div>
+
+  <!-- ✅ FOOTER (YOUR CODE, CORRECT PLACE) -->
+  <hr>
+
+  <p>
+    <a href="privacy.html">Privacy Policy</a>
+  </p>
+
+  <p>
+    Disclaimer: This calculator is for learning purpose only.
+  </p>
+
+  <!-- SCRIPT -->
+  <script>
+    function calculateSimple() {
+      let sales = Number(document.getElementById("sales").value);
+      let expenses = Number(document.getElementById("expenses").value);
+      let profit = sales - expenses;
+
+      document.getElementById("simpleResult").innerText =
+        "Monthly Profit: ₹" + profit;
+    }
+
+    function calculateAdvanced() {
+      let raw = Number(document.getElementById("raw").value);
+      let labour = Number(document.getElementById("labour").value);
+      let electricity = Number(document.getElementById("electricity").value);
+      let rent = Number(document.getElementById("rent").value);
+      let emi = Number(document.getElementById("emi").value);
+      let sales = Number(document.getElementById("advSales").value);
+
+      let totalCost = raw + labour + electricity + rent + emi;
+      let profit = sales - totalCost;
+
+      document.getElementById("advancedResult").innerText =
+        "Estimated Monthly Profit: ₹" + profit;
+    }
+  </script>
+
+</body>
+</html>

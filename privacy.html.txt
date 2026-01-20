@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Privacy Policy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy Policy for Business Profit Calculator website">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    h1, h2 {
+      color: #333;
+    }
+
+    a {
+      color: #007bff;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>Privacy Policy</h1>
+
+<p>
+At Business Profit & Subsidy Calculator, accessible from this website,
+we respect your privacy and are committed to protecting it.
+</p>
+
+<h2>Information We Collect</h2>
+
+<p>
+We do not collect any personal information such as name, email,
+phone number, or payment details.
+All calculations are done directly in your browser.
+</p>
+
+<h2>Cookies</h2>
+
+<p>
+This website may use cookies to improve user experience.
+Cookies do not store personal information.
+</p>
+
+<h2>Third-Party Services</h2>
+
+<p>
+We may use third-party services such as Google AdSense in the future.
+These services may use cookies to show relevant advertisements.
+</p>
+
+<h2>Children’s Information</h2>
+
+<p>
+We do not knowingly collect any personal information from children
+under the age of 13.
+</p>
+
+<h2>Consent</h2>
+
+<p>
+By using our website, you hereby consent to our Privacy Policy.
+</p>
+
+<h2>Contact Us</h2>
+
+<p>
+If you have any questions about this Privacy Policy, please contact us
+through the website.
+</p>
+
+<hr>
+
+<p>
+<a href="index.html">Back to Home</a>
+</p>
+
+</body>
+</html>

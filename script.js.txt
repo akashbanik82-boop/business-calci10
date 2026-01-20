@@ -1,0 +1,59 @@
+// SIMPLE MODE CALCULATION
+function calcSimple() {
+  var cost = Number(document.getElementById("simpleCost").value);
+  var sales = Number(document.getElementById("simpleSales").value);
+
+  if (cost === 0 || sales === 0) {
+    document.getElementById("simpleResult").innerHTML =
+      "Please enter both cost and sales.";
+    return;
+  }
+
+  var profit = sales - cost;
+  var margin = (profit / sales) * 100;
+
+  document.getElementById("simpleResult").innerHTML =
+    "Profit: ₹" + profit.toFixed(2) +
+    "<br>Profit Margin: " + margin.toFixed(2) + "%";
+}
+
+
+// ADVANCED MODE CALCULATION
+function calcAdvanced() {
+  var raw = Number(document.getElementById("raw").value);
+  var labour = Number(document.getElementById("labour").value);
+  var electricity = Number(document.getElementById("electricity").value);
+  var rent = Number(document.getElementById("rent").value);
+  var emi = Number(document.getElementById("emi").value);
+  var investment = Number(document.getElementById("investment").value);
+  var sales = Number(document.getElementById("advSales").value);
+
+  var totalCost =
+    raw + labour + electricity + rent + emi;
+
+  if (sales === 0) {
+    document.getElementById("advancedResult").innerHTML =
+      "Please enter monthly sales.";
+    return;
+  }
+
+  var profit = sales - totalCost;
+  var roi = (profit / investment) * 100;
+
+  document.getElementById("advancedResult").innerHTML =
+    "Total Cost: ₹" + totalCost.toFixed(2) +
+    "<br>Monthly Profit: ₹" + profit.toFixed(2) +
+    "<br>ROI: " + roi.toFixed(2) + "%";
+}
+
+
+// MODE TOGGLE (Simple ↔ Advanced)
+function toggleMode() {
+  var adv = document.getElementById("advanced");
+
+  if (adv.style.display === "none") {
+    adv.style.display = "block";
+  } else {
+    adv.style.display = "none";
+  }
+}
